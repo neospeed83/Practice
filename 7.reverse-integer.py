@@ -7,17 +7,8 @@
 # @lc code=start
 class Solution:
     def reverse(self, x: int) -> int:
-        result = []
-        if x == "-":
-            result[0] = "-"
-            result.append(x[1:]) 
-        else:
-            result = x[::-1]
-        
-        while result[0] == 0:
-            result.remove[0]
-        
-        return int(result)
-
+        sign = [1,-1][x<0]
+        res = sign * int(str((abs(x)))[::-1])
+        return res if -(2**31)-1 < res < (2**31) else 0
 
 # @lc code=end
