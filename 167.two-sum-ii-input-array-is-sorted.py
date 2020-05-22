@@ -7,10 +7,14 @@
 # @lc code=start
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        for i in range(0,len(numbers)):
-            if numbers[i] <= target:
-                for j in range(i+1,len(numbers)):    
-                    if numbers[j] <= target:
-                        if numbers[i] + numbers[j] == target:       
-                            return [i+1,j+1]
+        i = 0
+        j = len(numbers) - 1
+
+        while i < len(numbers):
+            if numbers[i] + numbers[j] == target:
+                return [i+1, j+1]
+            if numbers[i] + numbers[j] < target:
+                i+=1
+            if numbers[i] + numbers[j] > target:
+                j-=1
 # @lc code=end
