@@ -10,7 +10,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        while k>0:
+        
             
 # @lc code=end
 
